@@ -13,7 +13,7 @@ class BugTest {
 
     @Test
     fun test() {
-        val id = repository.save(Pojo("a")).id
+        val id = repository.save(Pojo("a", listOf("b", "c"))).id
         assertEquals("a", repository.findNameById(id))
     }
 }
